@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barrie Nissan · Customer Hub</title>
+  <meta name="description" content="Everything a Barrie Nissan customer needs in one place: hours, service booking, parts, financing, owner resources and who to call.">
+  <meta name="theme-color" content="#0f0f10">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero__top">
+        <a class="hero__logo" id="logoLink" href="#"><img id="logoImg" src="" alt=""></a>
+        <span class="status" id="status"><span class="status__dot"></span><span id="statusText">Checking hours…</span></span>
+      </div>
+      <h1 class="hero__title"><span id="dealerName"></span> <span class="hero__title-light">Customer Hub</span></h1>
+      <p class="hero__tagline" id="tagline"></p>
+      <div class="hero__cta" id="heroCta"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== QUICK ACTIONS ===== -->
+    <section class="section" id="quick">
+      <div class="container">
+        <h2 class="section__title">What do you need today?</h2>
+        <div class="tiles" id="quickActions"></div>
+      </div>
+    </section>
+
+    <!-- ===== HOURS & LOCATION ===== -->
+    <section class="section section--alt" id="hours">
+      <div class="container grid-2">
+        <div>
+          <h2 class="section__title">Hours</h2>
+          <div class="hours" id="hoursTable"></div>
+        </div>
+        <div>
+          <h2 class="section__title">Find us</h2>
+          <div class="card card--location">
+            <p class="card__big" id="addressLine"></p>
+            <p class="card__muted" id="addressCity"></p>
+            <div class="btn-row">
+              <a class="btn btn--dark" id="mapsBtn" href="#" target="_blank" rel="noopener">Open in Maps</a>
+              <a class="btn btn--ghost" id="callBtn" href="#">Call us</a>
+            </div>
+            <p class="card__small" id="tollFree"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ALL BRANDS WELCOME ===== -->
+    <section class="section" id="allbrands">
+      <div class="container">
+        <div class="banner">
+          <div class="banner__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5"/><rect x="2.5" y="13" width="19" height="6" rx="1.5"/><circle cx="7" cy="16" r="1"/><circle cx="17" cy="16" r="1"/></svg>
+          </div>
+          <div>
+            <h2 class="banner__title">Not driving a Nissan? You're still one of ours.</h2>
+            <p>If you bought your vehicle here, whatever the badge on the hood, everything on this page applies to you. Same team, same booking tools, same programs, same standards of care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HIGH MILEAGE CLUB ===== -->
+    <section class="section section--dark" id="hmc" hidden>
+      <div class="container grid-2 grid-2--center">
+        <div>
+          <p class="eyebrow">Loyalty program</p>
+          <h2 class="section__title section__title--light" id="hmcTitle"></h2>
+          <p class="lead" id="hmcText"></p>
+          <a class="btn btn--red" id="hmcCta" href="#" target="_blank" rel="noopener"></a>
+        </div>
+        <ul class="perks" id="hmcBullets"></ul>
+      </div>
+    </section>
+
+    <!-- ===== SERVICE VISIT ===== -->
+    <section class="section" id="service-visit">
+      <div class="container">
+        <p class="eyebrow">Service</p>
+        <h2 class="section__title">What to expect from a service visit</h2>
+        <p class="section__intro">Here's what a visit should look like, every time. If any step falls short, we want to hear about it the same day.</p>
+        <ol class="steps" id="serviceSteps"></ol>
+      </div>
+    </section>
+
+    <!-- ===== AFTER PURCHASE ===== -->
+    <section class="section section--alt" id="after-purchase">
+      <div class="container">
+        <p class="eyebrow">Sales</p>
+        <h2 class="section__title">Just bought a vehicle? Here's what comes next</h2>
+        <ol class="steps steps--compact" id="purchaseSteps"></ol>
+      </div>
+    </section>
+
+    <!-- ===== LINKS ===== -->
+    <section class="section" id="links">
+      <div class="container">
+        <h2 class="section__title">All the links, in one place</h2>
+        <div class="linkgroups" id="linkGroups"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <h2 class="section__title">Questions we get every week</h2>
+        <div class="faq" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ===== ESCALATION ===== -->
+    <section class="section section--red" id="help">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">We'd rather fix it than read about it</p>
+        <h2 class="section__title section__title--light">Something not right? Talk to us first.</h2>
+        <p class="lead lead--light">A problem we know about is a problem we can solve, usually within the week. Reach the person in charge directly.</p>
+        <div class="contacts" id="escalation"></div>
+        <div class="btn-row btn-row--center" id="reviewRow"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__social" id="social"></div>
+      <p class="footer__text"><span id="footerName"></span> · <a id="footerSite" href="#" target="_blank" rel="noopener">Visit our full website</a> · <a id="privacyLink" href="#" target="_blank" rel="noopener">Privacy</a></p>
+      <p class="footer__text footer__text--tiny">© <span id="year"></span> <span id="footerName2"></span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/dealer-config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
