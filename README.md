@@ -9,11 +9,23 @@ Static files only. No build step, no framework, no dependencies.
 ```
 index.html            page structure (you rarely touch this)
 css/styles.css        design; brand colours are the tokens at the top
-js/dealer-config.js   ALL dealer data: name, hours, links, FAQ, contacts  ← edit this
-js/app.js             renders the page from the config (no need to edit)
-assets/logo.svg       placeholder wordmark, replace with the dealer's logo
+js/dealer-config.js   dealer DATA: names, numbers, URLs, hours, people, which languages  ← edit this
+js/lang/en.js         every customer-facing TEXT, in English (master file)          ← edit this
+js/lang/uk.js …       Ukrainian, French, Spanish, Portuguese, Tagalog (same keys as en.js)
+js/app.js             renders the page from config + language (no need to edit)
+assets/logo.png       drop the dealer's logo here (falls back to the JPG on their site)
 assets/favicon.svg    tab icon
 ```
+
+## Languages
+
+Barrie is 81% English mother tongue, 14% non-official languages, with a large Ukrainian community since 2022 and long-standing Portuguese, Spanish, Italian, Polish and Filipino communities. The hub ships in six languages: English (default), Ukrainian, French, Spanish, Portuguese and Tagalog.
+
+The language bar is the first thing on the page (sticky) and repeats in the footer. The page auto-selects the browser's language on first visit, remembers the choice, and accepts `?lang=uk` in the URL, so a QR code or a text message can land the customer directly in Ukrainian: `https://your-domain/?lang=uk`.
+
+To add a language: copy `js/lang/en.js` to `js/lang/xx.js`, translate the values (keep the keys), add `<script src="js/lang/xx.js">` in `index.html`, and add `"xx"` to `languages` in `dealer-config.js`. To remove one: delete it from `languages`. Prices, phone numbers, names and "We Make It Easy" stay as-is in every language on purpose.
+
+Translations were produced by Pista Studio; a native-speaker read-through before launch is cheap insurance, especially for Ukrainian and Tagalog.
 
 ## Preview in VS Code
 
@@ -42,19 +54,13 @@ Connect the repo, framework preset "Other", no build command, output directory `
 
 ## Before going live: things to confirm with the dealer
 
-Search `TODO` in `js/dealer-config.js`. Each one is a fact pulled from nowhere public and needs the dealer's answer:
+Most content was pulled from barrienissan.ca on 2026-09-08 (hours, staff and extensions, High Mileage Club terms, My Mechanic everyday values, shuttle). Only three `TODO (dealer to confirm)` remain, all in the FAQ (search `TODO` in `js/lang/*.js`):
 
-- Direct phone lines for Service and Parts (currently the main number)
-- High Mileage Club: perks and sign-up / program page URL
-- Service Manager and Sales Manager names, emails, direct lines
-- Google "Write a review" link (`googleReviewUrl`) — get it from Google Business Profile → *Ask for reviews*
-- Shuttle / courtesy vehicle: radius, hours, loaner availability
-- Lounge amenities (Wi-Fi, coffee, work space)
-- Tire storage: offered or not, price, how to book the seasonal swap
-- SMS / text updates during service visits: offered or not
-- Official logo file (replace `assets/logo.svg`)
+- Lounge amenities (Wi-Fi, coffee, work space): confirm the exact list
+- Tire storage: offered or not, price, how to book
+- SMS / text updates during a service visit: offered or not
 
-Hours were taken from barrienissan.ca on 2026-09-08. Confirm they're still right, and remember holiday hours aren't handled automatically.
+Also worth confirming: the official logo PNG (drop it in `assets/logo.png`), that ext. 129 (Nancy) and ext. 120 (Nicole) are the ones the dealer wants customers using, and that Bjorn is comfortable being the "Not satisfied?" email contact. Holiday hours are not handled automatically.
 
 ## Why the page is built this way (CSI / SSI logic)
 
@@ -80,13 +86,13 @@ The escalation section matters most: a customer who can reach a manager in one t
 ## Reusing for another dealer
 
 1. Copy the folder.
-2. Rewrite `js/dealer-config.js` (name, address, phones, hours, links, contacts, FAQ, programs). Set `highMileageClub.enabled` to `false` if the dealer has no equivalent program.
-3. Swap `assets/logo.svg` and `assets/favicon.svg`.
-4. In `css/styles.css`, change `--red` (and `--red-dark`) to the brand colour.
-5. Update `<title>` and `<meta name="description">` in `index.html`.
+2. Rewrite `js/dealer-config.js` (name, address, phones, hours, links, contacts, programs, languages). Set `highMileageClub.enabled` / `everydayValue.enabled` to `false` if the dealer has no equivalent.
+3. Rewrite the texts in `js/lang/en.js`, then regenerate the other language files from it.
+4. Swap `assets/logo.png` and `assets/favicon.svg`.
+5. In `css/styles.css`, change `--red` (and `--red-dark`) to the brand colour.
 6. Publish.
 
 Nothing else changes. Roughly 30 minutes per dealer once the info is in hand.
 
 ---
-Built by Pista Studio.
+Built by Pista Studio Marketing inc. — https://pista.ca
