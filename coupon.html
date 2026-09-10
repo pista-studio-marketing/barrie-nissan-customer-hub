@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barrie Nissan · Service coupon</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { background: var(--bg-alt); }
+    .cpage { max-width: 640px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+    .cpage__top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .cpage__back { font-size: .9rem; font-weight: 600; text-decoration: none; color: var(--muted); }
+    .cpage__back:hover { color: var(--text); }
+    .cpage__langs { display: flex; gap: .3rem; flex-wrap: wrap; justify-content: flex-end; }
+    .cpage__langs .langbtn { padding: .3rem .6rem; font-size: .75rem; }
+
+    .ticket { background: #fff; border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; position: relative; border: 1px solid var(--line); }
+    .ticket__head { background: var(--ink); color: #fff; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .ticket__logo { background: #fff; border-radius: 10px; padding: .4rem .7rem; display: inline-flex; }
+    .ticket__logo img { height: 44px; width: auto; }
+    .ticket__kind { font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.75); text-align: right; }
+    .ticket__kind strong { display: block; color: #fff; font-size: .95rem; letter-spacing: .04em; text-transform: none; margin-top: .2rem; }
+    .ticket__body { padding: 1.5rem; }
+    .ticket__badge { display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--red); padding: .3rem .6rem; border-radius: 6px; }
+    .ticket--new .ticket__badge { background: var(--ink); }
+    .ticket__title { font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; margin: .75rem 0 .5rem; }
+    .ticket__price { font-size: 3rem; font-weight: 800; letter-spacing: -.04em; color: var(--red); line-height: 1; margin: .5rem 0; }
+    .ticket__regular { font-size: 1.1rem; color: var(--muted); font-weight: 500; margin-left: .5rem; }
+    .ticket__text { font-size: 1rem; color: var(--text); margin: .5rem 0 1rem; }
+    .ticket__terms { font-size: .8rem; color: var(--muted); }
+    .ticket__cut { border-top: 2px dashed #cfcfd6; margin: 0 1.5rem; position: relative; }
+    .ticket__cut::before, .ticket__cut::after { content: ""; position: absolute; top: -13px; width: 24px; height: 24px; border-radius: 50%; background: var(--bg-alt); border: 1px solid var(--line); }
+    .ticket__cut::before { left: -37px; } .ticket__cut::after { right: -37px; }
+    .ticket__foot { padding: 1.25rem 1.5rem 1.5rem; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; }
+    .ticket__meta { font-size: .85rem; color: var(--muted); }
+    .ticket__meta strong { display: block; color: var(--text); font-size: .95rem; }
+    .ticket__code { text-align: center; border: 2px solid var(--ink); border-radius: 10px; padding: .6rem .9rem; }
+    .ticket__code small { display: block; font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .ticket__code span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.15rem; font-weight: 800; letter-spacing: .08em; }
+    .ticket__present { background: var(--bg-alt); padding: .9rem 1.5rem; font-size: .9rem; font-weight: 600; text-align: center; border-top: 1px solid var(--line); }
+
+    .cactions { display: grid; gap: .6rem; margin-top: 1.25rem; }
+    @media (min-width: 560px) { .cactions { grid-template-columns: 1fr 1fr 1fr; } }
+    .cactions .btn { width: 100%; }
+    .chint { font-size: .8rem; color: var(--muted); margin-top: .75rem; text-align: center; }
+    .cfooter { text-align: center; font-size: .75rem; color: var(--muted); margin-top: 2rem; }
+    .cfooter a { color: var(--text); }
+
+    @media print {
+      @page { margin: 12mm; }
+      body { background: #fff; }
+      .cpage { padding: 0; max-width: none; }
+      .cpage__top, .cactions, .chint, .cfooter, .langbar { display: none !important; }
+      .ticket { box-shadow: none; border: 1px solid #999; break-inside: avoid; }
+      .ticket__head { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .ticket__badge, .ticket__price { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cpage">
+    <div class="cpage__top">
+      <a class="cpage__back" id="back" href="index.html">←</a>
+      <div class="cpage__langs" id="langs"></div>
+    </div>
+
+    <article class="ticket" id="ticket">
+      <div class="ticket__head">
+        <span class="ticket__logo"><img id="logo" src="assets/logo.png" alt="Barrie Nissan"></span>
+        <div class="ticket__kind" id="kind"></div>
+      </div>
+      <div class="ticket__body">
+        <span class="ticket__badge" id="badge"></span>
+        <h1 class="ticket__title" id="title"></h1>
+        <div class="ticket__price"><span id="price"></span><s class="ticket__regular" id="regular"></s></div>
+        <p class="ticket__text" id="text"></p>
+        <p class="ticket__terms" id="terms"></p>
+      </div>
+      <div class="ticket__cut"></div>
+      <div class="ticket__foot">
+        <div class="ticket__meta"><strong id="dealer"></strong><span id="address"></span><br><span id="phone"></span><br><span id="validity"></span></div>
+        <div class="ticket__code"><small id="codeLabel"></small><span id="code"></span></div>
+      </div>
+      <div class="ticket__present" id="present"></div>
+    </article>
+
+    <div class="cactions">
+      <button class="btn btn--red" id="printBtn" type="button"></button>
+      <button class="btn btn--dark" id="shareBtn" type="button"></button>
+      <a class="btn btn--ghost" id="bookBtn" href="#" target="_blank" rel="noopener"></a>
+    </div>
+    <p class="chint" id="hint"></p>
+    <p class="cfooter" id="foot"></p>
+  </div>
+
+  <script src="js/dealer-config.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/lang/uk.js"></script>
+  <script src="js/lang/fr.js"></script>
+  <script src="js/lang/es.js"></script>
+  <script src="js/lang/pt.js"></script>
+  <script src="js/lang/tl.js"></script>
+  <script src="js/coupon.js"></script>
+</body>
+</html>

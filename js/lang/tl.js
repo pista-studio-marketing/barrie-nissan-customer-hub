@@ -38,6 +38,12 @@ window.LANGS.tl = {
     visitWebsite: "Bisitahin ang buong website", privacy: "Privacy", rights: "Lahat ng karapatan ay nakalaan.",
     publishedBy: "Customer Hub na ginawa ng",
     stickyBook: "Mag-book ng service", stickyCall: "Tumawag",
+    specialsEyebrow: "Service specials", specialsTitle: "Mga special ngayong season", specialsIntro: "Ipakita ang coupon sa inyong phone o i-print at ibigay sa inyong advisor. Iyon lang.",
+    viewCoupon: "Tingnan ang coupon", regularPrice: "Regular na presyo", validUntil: "Valid hanggang {d}", noExpiry: "Walang expiry", limitedSpots: "Limitado ang slots",
+    badgeSale: "Sale", badgeSave15: "Makatipid ng 15%", badgeNew: "Bago",
+    couponTitle: "Service coupon", presentThis: "Ipakita ang coupon na ito sa inyong service advisor sa pag-drop off.", couponCode: "Coupon code",
+    printCoupon: "I-print ang coupon", saveCoupon: "I-save sa phone", saveHint: "Sa iPhone: i-tap ang Share, pagkatapos Save to Files o Add to Photos. Sa Android: Share, pagkatapos Print, pagkatapos Save as PDF.", backToHub: "Bumalik sa hub",
+    bookNow: "Mag-book na", oneCoupon: "Isang coupon bawat pagbisita. Hindi maaaring pagsamahin sa ibang alok. Hindi kasama ang buwis at environmental fees.",
     reviewsEyebrow: "Sabihin sa amin kung kumusta kami"
   },
 
@@ -48,6 +54,12 @@ window.LANGS.tl = {
     parts:    ["Mag-order ng genuine parts", "Ipadala o kunin sa store"],
     tires:    ["Tire Centre", "Gulong, rims at seasonal swap"],
     specials: ["Service specials", "Kasalukuyang alok sa maintenance"]
+  },
+
+  specials: {
+    oil:     ["Oil change special", "Full synthetic oil change, sale sa $109.99 sa halip na $139.99.", "Karamihan ng brand at model. Hanggang 5 L na synthetic oil, kasama ang filter."],
+    tires:   ["Early Bird tire changeover", "Changeover, 4-wheel balance, 4-wheel alignment at isang season ng tire storage, lahat sa $385. Mag-book at tapusin bago ang Oktubre 2, 2026 at makatipid ng 15%.", "Ang 15% off ay para sa serbisyong natapos bago o sa Oktubre 2, 2026. Isang season ang storage."],
+    storage: ["Bago: tire storage", "$60 para sa unang season. Limitado ang slots, first come, first served.", "Introductory na presyo para sa unang season. Standard na rate pagkatapos."]
   },
 
   linkGroups: { shop: "Mamili", finance: "Financing", service: "Service at parts", owner: "Resources para sa may-ari ng Nissan" },
@@ -131,7 +143,7 @@ window.LANGS.tl = {
     ["May shuttle o courtesy vehicle ba kayo?", "Pareho. May libreng shuttle papunta sa mga lokal na destinasyon sa oras ng service, at may loaner vehicles sa $20 bawat araw kailan man ninyo kailangan. Sabihin ito sa pag-book para handa na pagdating ninyo."],
     ["Puwede ba akong maghintay sa dealership?", "Siyempre. Kumuha ng kape sa lounge, kumonekta sa Wi-Fi at magtrabaho habang inaasikaso namin ang sasakyan. TODO (kumpirmahin sa dealer): eksaktong listahan ng amenities."],
     ["Paano ko malalaman kung may open recall ang sasakyan ko?", "Gamitin ang recall lookup ng Nissan Canada gamit ang inyong VIN (link sa itaas). Libre ang recall repair. Puwede rin naming tingnan sa susunod ninyong pagbisita."],
-    ["Saan ako pupunta para sa gulong at seasonal swap?", "Sa Barrie Nissan Tire Centre, dito mismo, na may lowest price guarantee sa gulong. I-book ang seasonal changeover tulad ng ibang service appointment. TODO (kumpirmahin sa dealer): may tire storage ba, presyo at paano mag-book."],
+    ["Saan ako pupunta para sa gulong at seasonal swap?", "Sa Barrie Nissan Tire Centre, dito mismo, na may lowest price guarantee sa gulong. I-book ang seasonal changeover tulad ng ibang service appointment. Bago ngayong season: tire storage sa $60 para sa unang season, limitado ang slots. Tingnan ang Early Bird bundle sa mga special sa itaas."],
     ["Kabibili ko lang ng sasakyan. Ano ang susunod?", "Ipapakita ng delivery specialist ang sasakyan, ipa-pair ang phone at ise-set up ang NissanConnect. Kung may tanong kayo pag-uwi, mas gusto naming tumawag kayo kaysa manghula. Normal ang follow-up call sa loob ng ilang araw, at magmumula sa amin ang paalala ng unang maintenance."],
     ["May hindi tama sa pagbisita ko. Sino ang kakausapin ko?", "Pakisabi muna sa amin, at sabihin agad. Si Steve Ward ang namamahala sa Service at Parts, si Quinn Graham sa Sales, at si Bjorn Surmann ang General Manager. Nasa ibaba ang kanilang direktang linya para maayos ang problema sa loob ng linggo, hindi pagkatapos dumating ng survey sa inyong inbox."]
   ]

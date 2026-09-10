@@ -38,6 +38,12 @@ window.LANGS.fr = {
     visitWebsite: "Visiter notre site complet", privacy: "Confidentialité", rights: "Tous droits réservés.",
     publishedBy: "Espace client conçu par",
     stickyBook: "Rendez-vous service", stickyCall: "Appeler",
+    specialsEyebrow: "Promotions service", specialsTitle: "Les promotions de la saison", specialsIntro: "Montrez le coupon sur votre téléphone ou imprimez-le et remettez-le à votre conseiller. C'est tout.",
+    viewCoupon: "Voir le coupon", regularPrice: "Prix régulier", validUntil: "Valide jusqu'au {d}", noExpiry: "Sans date limite", limitedSpots: "Places limitées",
+    badgeSale: "En solde", badgeSave15: "Économisez 15 %", badgeNew: "Nouveau",
+    couponTitle: "Coupon service", presentThis: "Présentez ce coupon à votre conseiller au service lors du dépôt du véhicule.", couponCode: "Code du coupon",
+    printCoupon: "Imprimer le coupon", saveCoupon: "Enregistrer sur le téléphone", saveHint: "Sur iPhone: touchez Partager, puis Enregistrer dans Fichiers ou Ajouter à Photos. Sur Android: Partager, puis Imprimer, puis Enregistrer en PDF.", backToHub: "Retour à l'espace client",
+    bookNow: "Réserver", oneCoupon: "Un coupon par visite. Ne peut être combiné à d'autres offres. Taxes et frais environnementaux en sus.",
     reviewsEyebrow: "Dites-nous comment ça s'est passé"
   },
 
@@ -48,6 +54,12 @@ window.LANGS.fr = {
     parts:    ["Commander des pièces d'origine", "Livraison ou cueillette en magasin"],
     tires:    ["Centre du pneu", "Pneus, jantes et changements saisonniers"],
     specials: ["Promotions service", "Offres en cours sur l'entretien"]
+  },
+
+  specials: {
+    oil:     ["Promo changement d'huile", "Changement d'huile synthétique à 109,99 $ au lieu de 139,99 $.", "La plupart des marques et modèles. Jusqu'à 5 L d'huile synthétique, filtre inclus."],
+    tires:   ["Changement de pneus Early Bird", "Changement, équilibrage des 4 roues, alignement des 4 roues et une saison d'entreposage de pneus, le tout pour 385 $. Réservez et complétez avant le 2 octobre 2026 et économisez 15 %.", "Le rabais de 15 % s'applique si le service est complété au plus tard le 2 octobre 2026. Entreposage pour une saison."],
+    storage: ["Nouveau: entreposage de pneus", "60 $ pour la première saison. Places limitées, premier arrivé, premier servi.", "Prix de lancement pour la première saison. Tarif régulier par la suite."]
   },
 
   linkGroups: { shop: "Magasiner", finance: "Financement", service: "Service et pièces", owner: "Ressources propriétaires Nissan" },
@@ -131,7 +143,7 @@ window.LANGS.fr = {
     ["Offrez-vous une navette ou un véhicule de courtoisie?", "Les deux. Une navette gratuite dessert les destinations locales pendant les heures du service, et des véhicules de courtoisie sont offerts à 20 $ par jour quand vous en avez besoin. Mentionnez-le à la réservation pour que tout soit prêt à votre arrivée."],
     ["Puis-je attendre sur place?", "Bien sûr. Prenez un café dans le salon, connectez-vous au Wi-Fi et avancez votre travail pendant qu'on s'occupe du véhicule. TODO (à confirmer avec la concession): liste exacte des commodités."],
     ["Comment vérifier si mon véhicule fait l'objet d'un rappel?", "Utilisez l'outil de vérification des rappels de Nissan Canada avec votre NIV (lien ci-dessus). Les réparations liées à un rappel sont sans frais. On peut aussi vérifier pour vous à votre prochaine visite."],
-    ["Où aller pour les pneus et les changements saisonniers?", "Au Centre du pneu Barrie Nissan, directement sur place, avec la garantie du plus bas prix sur les pneus. Réservez un changement saisonnier comme n'importe quel rendez-vous au service. TODO (à confirmer avec la concession): entreposage des pneus offert, prix et façon de réserver."],
+    ["Où aller pour les pneus et les changements saisonniers?", "Au Centre du pneu Barrie Nissan, directement sur place, avec la garantie du plus bas prix sur les pneus. Réservez un changement saisonnier comme n'importe quel rendez-vous au service. Nouveau cette saison: entreposage de pneus à 60 $ pour la première saison, places limitées. Voyez le forfait Early Bird dans les promotions ci-dessus."],
     ["Je viens d'acheter mon véhicule. Que se passe-t-il ensuite?", "Votre spécialiste à la livraison vous fait le tour du véhicule, jumelle votre téléphone et configure NissanConnect. Si des questions surgissent une fois à la maison, on préfère que vous appeliez plutôt que de deviner. Un appel de suivi dans les jours suivants est normal, et le rappel de votre premier entretien viendra de nous."],
     ["Quelque chose n'a pas fonctionné lors de ma visite. À qui parler?", "Dites-le-nous d'abord, et vite. Steve Ward dirige le service et les pièces, Quinn Graham dirige les ventes et Bjorn Surmann est le directeur général. Leurs lignes directes sont ci-dessous pour que le problème soit réglé la même semaine, pas après qu'un sondage arrive dans votre boîte courriel."]
   ]

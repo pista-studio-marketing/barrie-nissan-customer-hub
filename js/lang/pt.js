@@ -38,6 +38,12 @@ window.LANGS.pt = {
     visitWebsite: "Visitar o nosso site completo", privacy: "Privacidade", rights: "Todos os direitos reservados.",
     publishedBy: "Portal criado por",
     stickyBook: "Marcar serviço", stickyCall: "Ligar",
+    specialsEyebrow: "Promoções de serviço", specialsTitle: "Promoções da época", specialsIntro: "Mostre o cupão no telemóvel ou imprima-o e entregue-o ao seu consultor. É só isso.",
+    viewCoupon: "Ver cupão", regularPrice: "Preço normal", validUntil: "Válido até {d}", noExpiry: "Sem data limite", limitedSpots: "Vagas limitadas",
+    badgeSale: "Em promoção", badgeSave15: "Poupe 15%", badgeNew: "Novo",
+    couponTitle: "Cupão de serviço", presentThis: "Apresente este cupão ao seu consultor de serviço na entrega do veículo.", couponCode: "Código do cupão",
+    printCoupon: "Imprimir cupão", saveCoupon: "Guardar no telemóvel", saveHint: "No iPhone: toque em Partilhar e depois em Guardar em Ficheiros ou Adicionar a Fotos. No Android: Partilhar, depois Imprimir, depois Guardar como PDF.", backToHub: "Voltar ao portal",
+    bookNow: "Marcar agora", oneCoupon: "Um cupão por visita. Não acumulável com outras ofertas. Impostos e taxas ambientais não incluídos.",
     reviewsEyebrow: "Diga-nos como correu"
   },
 
@@ -48,6 +54,12 @@ window.LANGS.pt = {
     parts:    ["Encomendar peças originais", "Envio ou levantamento na loja"],
     tires:    ["Centro de pneus", "Pneus, jantes e trocas sazonais"],
     specials: ["Promoções de serviço", "Ofertas atuais em manutenção"]
+  },
+
+  specials: {
+    oil:     ["Promoção de mudança de óleo", "Mudança de óleo sintético por $109.99 em vez de $139.99.", "A maioria das marcas e modelos. Até 5 L de óleo sintético, filtro incluído."],
+    tires:   ["Troca de pneus Early Bird", "Troca, equilibragem das 4 rodas, alinhamento das 4 rodas e uma época de armazenamento de pneus, tudo por $385. Marque e conclua antes de 2 de outubro de 2026 e poupe 15%.", "O desconto de 15% aplica-se se o serviço for concluído até 2 de outubro de 2026. Armazenamento por uma época."],
+    storage: ["Novo: armazenamento de pneus", "$60 pela primeira época. Vagas limitadas, por ordem de chegada.", "Preço de lançamento para a primeira época. Depois aplica-se a tarifa normal."]
   },
 
   linkGroups: { shop: "Comprar", finance: "Financiamento", service: "Serviço e peças", owner: "Recursos para proprietários Nissan" },
@@ -131,7 +143,7 @@ window.LANGS.pt = {
     ["Têm transporte ou veículo de cortesia?", "Ambos. Um transporte gratuito serve destinos locais no horário do serviço, e há veículos de substituição por $20 por dia sempre que precisar. Refira-o ao marcar para que esteja pronto quando chegar."],
     ["Posso esperar no concessionário?", "Claro. Tome um café na sala de espera, ligue-se ao Wi-Fi e adiante trabalho enquanto tratamos do veículo. TODO (a confirmar com o concessionário): lista exata de comodidades."],
     ["Como verifico se o meu veículo tem um recall pendente?", "Use a consulta de recalls da Nissan Canada com o seu VIN (ligação acima). As reparações de recall são gratuitas. Também podemos verificar por si na próxima visita."],
-    ["Onde vou para pneus e trocas sazonais?", "Ao Centro de pneus Barrie Nissan, aqui mesmo, com garantia do preço mais baixo em pneus. Marque a troca sazonal como qualquer outra visita ao serviço. TODO (a confirmar com o concessionário): armazenamento de pneus disponível, preço e como marcar."],
+    ["Onde vou para pneus e trocas sazonais?", "Ao Centro de pneus Barrie Nissan, aqui mesmo, com garantia do preço mais baixo em pneus. Marque a troca sazonal como qualquer outra visita ao serviço. Novo esta época: armazenamento de pneus por $60 na primeira época, vagas limitadas. Veja o pacote Early Bird nas promoções acima."],
     ["Acabei de comprar o meu veículo. O que se segue?", "O seu especialista de entrega apresenta-lhe o veículo, emparelha o telemóvel e configura o NissanConnect. Se tiver dúvidas em casa, preferimos que ligue a que adivinhe. Uma chamada de acompanhamento nos dias seguintes é normal, e o lembrete da primeira manutenção virá de nós."],
     ["Algo não correu bem na minha visita. Com quem falo?", "Por favor, diga-nos primeiro, e rapidamente. Steve Ward dirige o Serviço e as Peças, Quinn Graham dirige as Vendas e Bjorn Surmann é o diretor geral. As linhas diretas deles estão abaixo para que o problema seja resolvido na mesma semana, e não depois de um inquérito chegar à sua caixa de correio."]
   ]

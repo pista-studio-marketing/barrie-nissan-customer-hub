@@ -38,6 +38,12 @@ window.LANGS.es = {
     visitWebsite: "Visitar nuestro sitio completo", privacy: "Privacidad", rights: "Todos los derechos reservados.",
     publishedBy: "Portal creado por",
     stickyBook: "Cita de servicio", stickyCall: "Llamar",
+    specialsEyebrow: "Promociones de servicio", specialsTitle: "Promociones de la temporada", specialsIntro: "Muestre el cupón en su teléfono o imprímalo y entrégueselo a su asesor. Eso es todo.",
+    viewCoupon: "Ver cupón", regularPrice: "Precio regular", validUntil: "Válido hasta el {d}", noExpiry: "Sin fecha de vencimiento", limitedSpots: "Cupos limitados",
+    badgeSale: "En oferta", badgeSave15: "Ahorre 15%", badgeNew: "Nuevo",
+    couponTitle: "Cupón de servicio", presentThis: "Presente este cupón a su asesor de servicio al dejar el vehículo.", couponCode: "Código del cupón",
+    printCoupon: "Imprimir cupón", saveCoupon: "Guardar en el teléfono", saveHint: "En iPhone: toque Compartir y luego Guardar en Archivos o Añadir a Fotos. En Android: Compartir, luego Imprimir, luego Guardar como PDF.", backToHub: "Volver al portal",
+    bookNow: "Agendar ahora", oneCoupon: "Un cupón por visita. No acumulable con otras ofertas. Impuestos y cargos ambientales no incluidos.",
     reviewsEyebrow: "Cuéntenos cómo lo hicimos"
   },
 
@@ -48,6 +54,12 @@ window.LANGS.es = {
     parts:    ["Pedir repuestos originales", "Envío o recogida en tienda"],
     tires:    ["Centro de llantas", "Llantas, rines y cambios de temporada"],
     specials: ["Promociones de servicio", "Ofertas vigentes en mantenimiento"]
+  },
+
+  specials: {
+    oil:     ["Promoción de cambio de aceite", "Cambio de aceite sintético por $109.99 en lugar de $139.99.", "La mayoría de marcas y modelos. Hasta 5 L de aceite sintético, filtro incluido."],
+    tires:   ["Cambio de llantas Early Bird", "Cambio, balanceo de 4 ruedas, alineación de 4 ruedas y una temporada de almacenamiento de llantas, todo por $385. Agende y complete antes del 2 de octubre de 2026 y ahorre 15%.", "El 15% de descuento aplica si el servicio se completa a más tardar el 2 de octubre de 2026. Almacenamiento por una temporada."],
+    storage: ["Nuevo: almacenamiento de llantas", "$60 por la primera temporada. Cupos limitados, por orden de llegada.", "Precio de lanzamiento para la primera temporada. Después aplica la tarifa regular."]
   },
 
   linkGroups: { shop: "Comprar", finance: "Financiamiento", service: "Servicio y repuestos", owner: "Recursos para propietarios Nissan" },
@@ -131,7 +143,7 @@ window.LANGS.es = {
     ["¿Ofrecen transporte o vehículo de cortesía?", "Ambos. Un transporte gratis va a destinos locales en horario de servicio, y hay vehículos de préstamo por $20 al día cuando los necesite. Menciónelo al agendar para que esté listo cuando llegue."],
     ["¿Puedo esperar en el concesionario?", "Por supuesto. Tómese un café en la sala de espera, conéctese al Wi-Fi y adelante trabajo mientras nos ocupamos del vehículo. TODO (confirmar con el concesionario): lista exacta de comodidades."],
     ["¿Cómo verifico si mi vehículo tiene un llamado a revisión?", "Use la consulta de llamados a revisión de Nissan Canada con su VIN (enlace arriba). Las reparaciones por llamado a revisión no tienen costo. También podemos verificarlo en su próxima visita."],
-    ["¿A dónde voy para llantas y cambios de temporada?", "Al Centro de llantas Barrie Nissan, aquí mismo, con garantía del precio más bajo en llantas. Agende el cambio de temporada como cualquier otra cita de servicio. TODO (confirmar con el concesionario): si ofrecen almacenamiento de llantas, precio y cómo reservarlo."],
+    ["¿A dónde voy para llantas y cambios de temporada?", "Al Centro de llantas Barrie Nissan, aquí mismo, con garantía del precio más bajo en llantas. Agende el cambio de temporada como cualquier otra cita de servicio. Nuevo esta temporada: almacenamiento de llantas por $60 la primera temporada, cupos limitados. Vea el paquete Early Bird en las promociones de arriba."],
     ["Acabo de comprar mi vehículo. ¿Qué sigue?", "Su especialista de entrega le muestra el vehículo, vincula su teléfono y configura NissanConnect. Si tiene preguntas al llegar a casa, preferimos que llame antes que adivinar. Una llamada de seguimiento en los días siguientes es normal, y el recordatorio de su primer mantenimiento vendrá de nosotros."],
     ["Algo no salió bien en mi visita. ¿Con quién hablo?", "Por favor, díganoslo primero, y pronto. Steve Ward dirige Servicio y Repuestos, Quinn Graham dirige Ventas y Bjorn Surmann es el gerente general. Sus líneas directas están abajo para que el problema se resuelva la misma semana, no después de que una encuesta llegue a su correo."]
   ]

@@ -17,6 +17,14 @@ assets/logo.png       drop the dealer's logo here (falls back to the JPG on thei
 assets/favicon.svg    tab icon
 ```
 
+## Service specials & coupons
+
+Specials live in `dealer-config.js` (`specials`: id, price, regular price, `validUntil` ISO date or null, coupon code, badge) and their text in each `js/lang/*.js` (`specials[id]`: title, details, terms). An expired special disappears from the page automatically on the day after `validUntil`.
+
+Each special has a "View coupon" button that opens `coupon.html?id=<id>&lang=<code>`: a printable ticket with the logo, price, terms, coupon code and "present this to your advisor". Print uses a clean print stylesheet; "Save to phone" opens the native share sheet on mobile (Save to Files / Photos) and falls back to the print dialog on desktop (Save as PDF). Advisors just need to read the code (e.g. `BN-EARLY-15`) off the screen or paper.
+
+To add a special: one line in `specials`, one line in each language file. To retire one: delete the line or set `validUntil` in the past.
+
 ## Languages
 
 Barrie is 81% English mother tongue, 14% non-official languages, with a large Ukrainian community since 2022 and long-standing Portuguese, Spanish, Italian, Polish and Filipino communities. The hub ships in six languages: English (default), Ukrainian, French, Spanish, Portuguese and Tagalog.
@@ -54,10 +62,9 @@ Connect the repo, framework preset "Other", no build command, output directory `
 
 ## Before going live: things to confirm with the dealer
 
-Most content was pulled from barrienissan.ca on 2026-09-08 (hours, staff and extensions, High Mileage Club terms, My Mechanic everyday values, shuttle). Only three `TODO (dealer to confirm)` remain, all in the FAQ (search `TODO` in `js/lang/*.js`):
+Most content was pulled from barrienissan.ca on 2026-09-08 (hours, staff and extensions, High Mileage Club terms, My Mechanic everyday values, shuttle). Only two `TODO (dealer to confirm)` remain, all in the FAQ (search `TODO` in `js/lang/*.js`):
 
 - Lounge amenities (Wi-Fi, coffee, work space): confirm the exact list
-- Tire storage: offered or not, price, how to book
 - SMS / text updates during a service visit: offered or not
 
 Also worth confirming: the official logo PNG (drop it in `assets/logo.png`), that ext. 129 (Nancy) and ext. 120 (Nicole) are the ones the dealer wants customers using, and that Bjorn is comfortable being the "Not satisfied?" email contact. Holiday hours are not handled automatically.

@@ -38,6 +38,12 @@ window.LANGS.en = {
     visitWebsite: "Visit our full website", privacy: "Privacy", rights: "All rights reserved.",
     publishedBy: "Customer Hub built by",
     stickyBook: "Book service", stickyCall: "Call",
+    specialsEyebrow: "Service specials", specialsTitle: "This season's specials", specialsIntro: "Show the coupon on your phone or print it and hand it to your advisor. That's it.",
+    viewCoupon: "View coupon", regularPrice: "Regular price", validUntil: "Valid until {d}", noExpiry: "No expiry", limitedSpots: "Limited spots",
+    badgeSale: "On sale", badgeSave15: "Save 15%", badgeNew: "New",
+    couponTitle: "Service coupon", presentThis: "Present this coupon to your service advisor at drop-off.", couponCode: "Coupon code",
+    printCoupon: "Print coupon", saveCoupon: "Save to phone", saveHint: "On iPhone: tap Share, then Save to Files or Add to Photos. On Android: tap Share, then Print, then Save as PDF.", backToHub: "Back to the hub",
+    bookNow: "Book now", oneCoupon: "One coupon per visit. Cannot be combined with other offers. Taxes and environmental fees extra.",
     reviewsEyebrow: "Tell us how we did"
   },
 
@@ -48,6 +54,12 @@ window.LANGS.en = {
     parts:    ["Order genuine parts", "Ship or pick up in store"],
     tires:    ["Tire Centre", "Tires, rims and seasonal swaps"],
     specials: ["Service specials", "Current offers on maintenance"]
+  },
+
+  specials: {
+    oil:     ["Oil change special", "Full synthetic oil change, on sale for $109.99 instead of $139.99.", "Most makes and models. Up to 5 L of synthetic oil, filter included."],
+    tires:   ["Early Bird tire changeover", "Changeover, 4-wheel balance, 4-wheel alignment and one season of tire storage, all for $385. Book and complete before October 2, 2026 and save 15%.", "15% off applies when the service is completed by October 2, 2026. Storage is one season."],
+    storage: ["New: tire storage", "$60 for the first season. Limited spots available, first come, first served.", "Introductory price for the first season. Standard rate applies afterwards."]
   },
 
   linkGroups: { shop: "Shop", finance: "Finance", service: "Service & parts", owner: "Nissan owner resources" },
@@ -131,7 +143,7 @@ window.LANGS.en = {
     ["Do you offer a shuttle or courtesy vehicle?", "Both. A free shuttle runs to local destinations during service hours, and loaner vehicles are available for $20 a day whenever you need one. Mention it when you book so it's ready when you arrive."],
     ["Can I wait at the dealership?", "Absolutely. Grab a coffee in the lounge, connect to the Wi-Fi and get some work done while we take care of the vehicle. TODO (dealer to confirm): list the exact amenities."],
     ["How do I check if my vehicle has an open recall?", "Use the Nissan Canada recall lookup with your VIN (link above). Recall repairs are done at no charge. We can also check for you at your next visit."],
-    ["Where do I go for tires and seasonal swaps?", "The Barrie Nissan Tire Centre, right here on site, with a lowest price guarantee on tires. Book a seasonal changeover like any other service appointment. TODO (dealer to confirm): tire storage offered, price and how to book it."],
+    ["Where do I go for tires and seasonal swaps?", "The Barrie Nissan Tire Centre, right here on site, with a lowest price guarantee on tires. Book a seasonal changeover like any other service appointment. New this season: tire storage for $60 for the first season, limited spots. See the specials above for the Early Bird changeover bundle."],
     ["I just bought my vehicle. What happens next?", "Your delivery specialist walks you through the vehicle, pairs your phone and sets up NissanConnect. If you have questions once you're home, we'd rather you call than guess. A follow-up call within a few days is normal, and your first maintenance reminder will come from us."],
     ["Something wasn't right with my visit. Who do I talk to?", "Please tell us first, and tell us quickly. Steve Ward runs Service and Parts, Quinn Graham runs Sales, and Bjorn Surmann is the General Manager. Their direct lines are below so a problem gets fixed the same week, not after a survey lands in your inbox."]
   ]

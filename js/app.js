@@ -23,6 +23,7 @@
     return "tel:+1" + base + (m ? "," + m[1] : "");
   };
   const extl = (url) => (/^https?:/i.test(url) ? { target: "_blank", rel: "noopener" } : {});
+  window.HUB = { get lang() { return current; }, fill, esc, el, telHref };
   const clear = (id) => { const n = $(id); if (n) n.innerHTML = ""; return n; };
 
   const ICONS = {
@@ -124,6 +125,29 @@
       n.innerHTML = `<span class="tile__icon">${ICONS[a.icon] || ICONS.star}</span><span class="tile__label">${esc(t[0])}</span><span class="tile__sub">${esc(t[1])}</span>`;
       qa.append(n);
     });
+
+    // Service specials / coupons
+    if (D.specials && D.specials.length) {
+      $("specials").hidden = false;
+      $("specialsEyebrow").textContent = U.specialsEyebrow; $("specialsTitle").textContent = U.specialsTitle; $("specialsIntro").textContent = U.specialsIntro;
+      const cl = clear("couponList");
+      const badgeText = { sale: U.badgeSale, save15: U.badgeSave15, new: U.badgeNew };
+      const fmtDate = (iso) => new Date(iso + "T12:00:00").toLocaleDateString(current === "uk" ? "uk-UA" : current === "tl" ? "en-CA" : current + "-CA", { year: "numeric", month: "long", day: "numeric" });
+      D.specials.forEach((sp) => {
+        const t = L.specials[sp.id] || [sp.id, "", ""];
+        const expired = sp.validUntil && new Date(sp.validUntil + "T23:59:59") < new Date();
+        if (expired) return;
+        const card = el("article", { class: "coupon coupon--" + esc(sp.badge || "sale") });
+        card.innerHTML =
+          `<div class="coupon__head"><span class="coupon__badge">${esc(badgeText[sp.badge] || "")}</span>` +
+          `<span class="coupon__validity">${sp.validUntil ? esc(fill(U.validUntil, { d: fmtDate(sp.validUntil) })) : (sp.id === "storage" ? esc(U.limitedSpots) : esc(U.noExpiry))}</span></div>` +
+          `<h3 class="coupon__title">${esc(t[0])}</h3>` +
+          `<div class="coupon__price">${esc(sp.price)}${sp.regular ? ` <s class="coupon__regular">${esc(sp.regular)}</s>` : ""}</div>` +
+          `<p class="coupon__text">${esc(t[1])}</p>` +
+          `<div class="coupon__actions"><a class="btn btn--red" href="coupon.html?id=${encodeURIComponent(sp.id)}&lang=${current}">${esc(U.viewCoupon)}</a></div>`;
+        cl.append(card);
+      });
+    }
 
     // Reviews
     if (D.reviews) {

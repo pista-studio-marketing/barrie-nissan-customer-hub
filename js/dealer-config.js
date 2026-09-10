@@ -51,8 +51,17 @@ window.DEALER = {
     { key: "map",    icon: "pin",    url: "https://www.google.com/maps/dir/?api=1&destination=630+Veterans+Dr,+Barrie,+ON+L4N+9J4" },
     { key: "parts",  icon: "parts",  url: "https://parts.barrienissan.ca/" },
     { key: "tires",  icon: "tire",   url: "https://www.barrienissan.ca/barrie-nissan-tire-centre/" },
-    { key: "specials", icon: "tag",  url: "https://www.barrienissan.ca/service-specials/" }
+    { key: "specials", icon: "tag",  url: "#specials" }
   ],
+
+  // Service specials shown as coupons. Text (title, details, terms) comes from lang.specials[id].
+  // price / regular are display strings; validUntil is ISO (null = no end date); code is shown on the coupon.
+  specials: [
+    { id: "oil",   price: "$109.99", regular: "$139.99", validUntil: null,         code: "BN-OIL-109",  badge: "sale" },
+    { id: "tires", price: "$385",    regular: null,      validUntil: "2026-10-02", code: "BN-EARLY-15", badge: "save15" },
+    { id: "storage", price: "$60",   regular: null,      validUntil: null,         code: "BN-STORE-60", badge: "new" }
+  ],
+  specialsContact: { name: "Steve Ward", email: "sward@barrienissan.com" },
 
   // Grouped links. Group titles and link labels come from lang.linkGroups / lang.links.
   linkGroups: [
