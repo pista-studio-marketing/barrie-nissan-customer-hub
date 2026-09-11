@@ -40,10 +40,11 @@ window.LANGS.en = {
     stickyBook: "Book service", stickyCall: "Call",
     specialsEyebrow: "Service specials", specialsTitle: "This season's specials", specialsIntro: "Show the coupon on your phone or print it and hand it to your advisor. That's it.",
     viewCoupon: "View coupon", regularPrice: "Regular price", validUntil: "Valid until {d}", noExpiry: "No expiry", limitedSpots: "Limited spots",
-    badgeSale: "On sale", badgeSave15: "Save 15%", badgeNew: "New",
+    badgeSale: "On sale", badgeSave15: "Save 15%", badgeNew: "New", badgeFree: "Free",
     couponTitle: "Service coupon", presentThis: "Present this coupon to your service advisor at drop-off.", couponCode: "Coupon code",
     printCoupon: "Print coupon", saveCoupon: "Save to phone", saveHint: "On iPhone: tap Share, then Save to Files or Add to Photos. On Android: tap Share, then Print, then Save as PDF.", backToHub: "Back to the hub",
     bookNow: "Book now", oneCoupon: "One coupon per visit. Cannot be combined with other offers. Taxes and environmental fees extra.",
+    specialsService: "Service", specialsParts: "Parts & accessories", presentThisParts: "Present this coupon at the parts counter at time of purchase.", plusTax: "plus tax", partsCoupon: "Parts coupon", orderParts: "Order online", askParts: "Ask the parts team",
     reviewsEyebrow: "Tell us how we did"
   },
 
@@ -59,7 +60,14 @@ window.LANGS.en = {
   specials: {
     oil:     ["Oil change special", "Full synthetic oil change, on sale for $109.99 instead of $139.99.", "Most makes and models. Up to 5 L of synthetic oil, filter included."],
     tires:   ["Early Bird tire changeover", "Changeover, 4-wheel balance, 4-wheel alignment and one season of tire storage, all for $385. Book and complete before October 2, 2026 and save 15%.", "15% off applies when the service is completed by October 2, 2026. Storage is one season."],
-    storage: ["New: tire storage", "$60 for the first season. Limited spots available, first come, first served.", "Introductory price for the first season. Standard rate applies afterwards."]
+    storage: ["New: tire storage", "$60 for the first season. Limited spots available, first come, first served.", "Introductory price for the first season. Standard rate applies afterwards."],
+    wipers:   ["Wiper blades + washer fluid", "Front wiper blades and a jug of washer fluid for $64.99 plus tax.", "Most makes and models. In-stock blades only."],
+    acc:      ["10% off all accessories", "Every accessory in the catalogue, floor mats and liners included.", "Excludes installation labour. In-stock and special-order accessories."],
+    battery:  ["$25 off car & truck batteries", "$25 off any car or truck battery, installation available on the spot.", "One battery per coupon. Installation labour extra."],
+    tpms:     ["10% off tire pressure sensors", "Ten percent off TPMS sensors, just in time for winter tires.", "Parts only. Installation and programming extra."],
+    fob:      ["Key fob batteries: buy one, get one 50% off", "Buy one key fob battery, get the second at half price.", "Second battery must be of equal or lesser value."],
+    frames:   ["Free Barrie Nissan licence plate frames", "Front and rear Barrie Nissan licence plate frames, no charge.", "One set per customer, while supplies last."],
+    delivery: ["New: local home delivery", "Order your parts and accessories online or by phone and we'll deliver to your door in the Barrie area.", "Ask the parts team about delivery zones and timing."]
   },
 
   linkGroups: { shop: "Shop", finance: "Finance", service: "Service & parts", owner: "Nissan owner resources" },

@@ -56,12 +56,22 @@ window.DEALER = {
 
   // Service specials shown as coupons. Text (title, details, terms) comes from lang.specials[id].
   // price / regular are display strings; validUntil is ISO (null = no end date); code is shown on the coupon.
+  // dept: "service" (present to advisor at drop-off) or "parts" (present at the parts counter at time of purchase).
+  // coupon: false = announcement card without a coupon (e.g. home delivery).
   specials: [
-    { id: "oil",   price: "$109.99", regular: "$139.99", validUntil: null,         code: "BN-OIL-109",  badge: "sale" },
-    { id: "tires", price: "$385",    regular: null,      validUntil: "2026-10-02", code: "BN-EARLY-15", badge: "save15" },
-    { id: "storage", price: "$60",   regular: null,      validUntil: null,         code: "BN-STORE-60", badge: "new" }
+    { id: "oil",     dept: "service", price: "$109.99", regular: "$139.99", validUntil: null,         code: "BN-OIL-109",   badge: "sale" },
+    { id: "tires",   dept: "service", price: "$385",    regular: null,      validUntil: "2026-10-02", code: "BN-EARLY-15",  badge: "save15" },
+    { id: "storage", dept: "service", price: "$60",     regular: null,      validUntil: null,         code: "BN-STORE-60",  badge: "new" },
+
+    { id: "wipers",   dept: "parts", price: "$64.99",  regular: null, validUntil: "2026-10-31", code: "BN-WIPE-64",   badge: "sale" },
+    { id: "acc",      dept: "parts", price: "10% off", regular: null, validUntil: "2026-10-31", code: "BN-ACC-10",    badge: "sale" },
+    { id: "battery",  dept: "parts", price: "$25 off", regular: null, validUntil: "2026-10-31", code: "BN-BATT-25",   badge: "sale" },
+    { id: "tpms",     dept: "parts", price: "10% off", regular: null, validUntil: "2026-10-31", code: "BN-TPMS-10",   badge: "sale" },
+    { id: "fob",      dept: "parts", price: "BOGO 50%", regular: null, validUntil: "2026-10-31", code: "BN-FOB-50",   badge: "sale" },
+    { id: "frames",   dept: "parts", price: "Free",    regular: null, validUntil: "2026-10-31", code: "BN-FRAME-0",   badge: "free" },
+    { id: "delivery", dept: "parts", price: null,      regular: null, validUntil: null,         code: null,           badge: "new", coupon: false }
   ],
-  specialsContact: { name: "Steve Ward", email: "sward@barrienissan.com" },
+  specialsContacts: { service: { name: "Steve Ward", email: "sward@barrienissan.com" }, parts: { name: "Nicole Balado", email: "nbalado@barrienissan.com" } },
 
   // Grouped links. Group titles and link labels come from lang.linkGroups / lang.links.
   linkGroups: [

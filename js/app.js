@@ -126,27 +126,37 @@
       qa.append(n);
     });
 
-    // Service specials / coupons
+    // Service & parts specials / coupons
     if (D.specials && D.specials.length) {
       $("specials").hidden = false;
       $("specialsEyebrow").textContent = U.specialsEyebrow; $("specialsTitle").textContent = U.specialsTitle; $("specialsIntro").textContent = U.specialsIntro;
-      const cl = clear("couponList");
-      const badgeText = { sale: U.badgeSale, save15: U.badgeSave15, new: U.badgeNew };
+      const badgeText = { sale: U.badgeSale, save15: U.badgeSave15, new: U.badgeNew, free: U.badgeFree || U.badgeSale };
       const fmtDate = (iso) => new Date(iso + "T12:00:00").toLocaleDateString(current === "uk" ? "uk-UA" : current === "tl" ? "en-CA" : current + "-CA", { year: "numeric", month: "long", day: "numeric" });
-      D.specials.forEach((sp) => {
-        const t = L.specials[sp.id] || [sp.id, "", ""];
-        const expired = sp.validUntil && new Date(sp.validUntil + "T23:59:59") < new Date();
-        if (expired) return;
-        const card = el("article", { class: "coupon coupon--" + esc(sp.badge || "sale") });
-        card.innerHTML =
-          `<div class="coupon__head"><span class="coupon__badge">${esc(badgeText[sp.badge] || "")}</span>` +
-          `<span class="coupon__validity">${sp.validUntil ? esc(fill(U.validUntil, { d: fmtDate(sp.validUntil) })) : (sp.id === "storage" ? esc(U.limitedSpots) : esc(U.noExpiry))}</span></div>` +
-          `<h3 class="coupon__title">${esc(t[0])}</h3>` +
-          `<div class="coupon__price">${esc(sp.price)}${sp.regular ? ` <s class="coupon__regular">${esc(sp.regular)}</s>` : ""}</div>` +
-          `<p class="coupon__text">${esc(t[1])}</p>` +
-          `<div class="coupon__actions"><a class="btn btn--red" href="coupon.html?id=${encodeURIComponent(sp.id)}&lang=${current}">${esc(U.viewCoupon)}</a></div>`;
-        cl.append(card);
-      });
+      const live = D.specials.filter((sp) => !(sp.validUntil && new Date(sp.validUntil + "T23:59:59") < new Date()));
+      const partsLink = (D.linkGroups.find((g) => g.key === "service") || { links: [] }).links.find((l) => l.key === "partsDept");
+      const renderGroup = (dept, listId, titleId, title) => {
+        const items = live.filter((sp) => (sp.dept || "service") === dept);
+        const box = clear(listId); const h = $(titleId);
+        h.textContent = title; h.hidden = items.length === 0; box.hidden = items.length === 0;
+        items.forEach((sp) => {
+          const t = L.specials[sp.id] || [sp.id, "", ""];
+          const isCoupon = sp.coupon !== false;
+          const card = el("article", { class: "coupon coupon--" + esc(sp.badge || "sale") + (isCoupon ? "" : " coupon--info") });
+          const validity = sp.validUntil ? fill(U.validUntil, { d: fmtDate(sp.validUntil) }) : (sp.id === "storage" ? U.limitedSpots : (isCoupon ? U.noExpiry : ""));
+          const action = isCoupon
+            ? `<a class="btn btn--red" href="coupon.html?id=${encodeURIComponent(sp.id)}&lang=${current}">${esc(U.viewCoupon)}</a>`
+            : `<a class="btn btn--dark" href="${esc(D.quickActions.find((a) => a.key === "parts")?.url || D.website)}" target="_blank" rel="noopener">${esc(U.orderParts)}</a>`;
+          card.innerHTML =
+            `<div class="coupon__head"><span class="coupon__badge">${esc(badgeText[sp.badge] || "")}</span><span class="coupon__validity">${esc(validity)}</span></div>` +
+            `<h3 class="coupon__title">${esc(t[0])}</h3>` +
+            (sp.price ? `<div class="coupon__price">${esc(sp.price)}${sp.regular ? ` <s class="coupon__regular">${esc(sp.regular)}</s>` : ""}</div>` : "") +
+            `<p class="coupon__text">${esc(t[1])}</p>` +
+            `<div class="coupon__actions">${action}</div>`;
+          box.append(card);
+        });
+      };
+      renderGroup("service", "couponListService", "specialsServiceTitle", U.specialsService);
+      renderGroup("parts", "couponListParts", "specialsPartsTitle", U.specialsParts);
     }
 
     // Reviews

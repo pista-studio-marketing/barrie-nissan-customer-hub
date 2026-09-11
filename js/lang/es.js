@@ -40,10 +40,11 @@ window.LANGS.es = {
     stickyBook: "Cita de servicio", stickyCall: "Llamar",
     specialsEyebrow: "Promociones de servicio", specialsTitle: "Promociones de la temporada", specialsIntro: "Muestre el cupón en su teléfono o imprímalo y entrégueselo a su asesor. Eso es todo.",
     viewCoupon: "Ver cupón", regularPrice: "Precio regular", validUntil: "Válido hasta el {d}", noExpiry: "Sin fecha de vencimiento", limitedSpots: "Cupos limitados",
-    badgeSale: "En oferta", badgeSave15: "Ahorre 15%", badgeNew: "Nuevo",
+    badgeSale: "En oferta", badgeSave15: "Ahorre 15%", badgeNew: "Nuevo", badgeFree: "Gratis",
     couponTitle: "Cupón de servicio", presentThis: "Presente este cupón a su asesor de servicio al dejar el vehículo.", couponCode: "Código del cupón",
     printCoupon: "Imprimir cupón", saveCoupon: "Guardar en el teléfono", saveHint: "En iPhone: toque Compartir y luego Guardar en Archivos o Añadir a Fotos. En Android: Compartir, luego Imprimir, luego Guardar como PDF.", backToHub: "Volver al portal",
     bookNow: "Agendar ahora", oneCoupon: "Un cupón por visita. No acumulable con otras ofertas. Impuestos y cargos ambientales no incluidos.",
+    specialsService: "Servicio", specialsParts: "Repuestos y accesorios", presentThisParts: "Presente este cupón en el mostrador de repuestos al momento de la compra.", plusTax: "más impuestos", partsCoupon: "Cupón de repuestos", orderParts: "Pedir en línea", askParts: "Pregunte al equipo de repuestos",
     reviewsEyebrow: "Cuéntenos cómo lo hicimos"
   },
 
@@ -59,7 +60,14 @@ window.LANGS.es = {
   specials: {
     oil:     ["Promoción de cambio de aceite", "Cambio de aceite sintético por $109.99 en lugar de $139.99.", "La mayoría de marcas y modelos. Hasta 5 L de aceite sintético, filtro incluido."],
     tires:   ["Cambio de llantas Early Bird", "Cambio, balanceo de 4 ruedas, alineación de 4 ruedas y una temporada de almacenamiento de llantas, todo por $385. Agende y complete antes del 2 de octubre de 2026 y ahorre 15%.", "El 15% de descuento aplica si el servicio se completa a más tardar el 2 de octubre de 2026. Almacenamiento por una temporada."],
-    storage: ["Nuevo: almacenamiento de llantas", "$60 por la primera temporada. Cupos limitados, por orden de llegada.", "Precio de lanzamiento para la primera temporada. Después aplica la tarifa regular."]
+    storage: ["Nuevo: almacenamiento de llantas", "$60 por la primera temporada. Cupos limitados, por orden de llegada.", "Precio de lanzamiento para la primera temporada. Después aplica la tarifa regular."],
+    wipers:   ["Plumillas + líquido limpiaparabrisas", "Plumillas delanteras y un galón de líquido limpiaparabrisas por $64.99 más impuestos.", "La mayoría de marcas y modelos. Solo plumillas en existencia."],
+    acc:      ["10% de descuento en todos los accesorios", "Todos los accesorios del catálogo, tapetes y protectores incluidos.", "No incluye mano de obra de instalación. Accesorios en existencia y por pedido."],
+    battery:  ["$25 de descuento en baterías", "$25 de descuento en cualquier batería de auto o camioneta, instalación en el momento.", "Una batería por cupón. Mano de obra de instalación aparte."],
+    tpms:     ["10% de descuento en sensores de presión", "Diez por ciento de descuento en sensores TPMS, justo a tiempo para las llantas de invierno.", "Solo repuestos. Instalación y programación aparte."],
+    fob:      ["Pilas de llave: la segunda a mitad de precio", "Compre una pila para su llave y lleve la segunda al 50%.", "La segunda pila debe ser de igual o menor valor."],
+    frames:   ["Marcos de placa Barrie Nissan gratis", "Marcos de placa delantero y trasero Barrie Nissan, sin costo.", "Un juego por cliente, hasta agotar existencias."],
+    delivery: ["Nuevo: entrega a domicilio local", "Pida sus repuestos y accesorios en línea o por teléfono y se los llevamos a su puerta en el área de Barrie.", "Pregunte al equipo de repuestos por zonas y tiempos de entrega."]
   },
 
   linkGroups: { shop: "Comprar", finance: "Financiamiento", service: "Servicio y repuestos", owner: "Recursos para propietarios Nissan" },

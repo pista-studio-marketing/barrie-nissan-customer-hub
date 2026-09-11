@@ -40,10 +40,11 @@ window.LANGS.pt = {
     stickyBook: "Marcar serviço", stickyCall: "Ligar",
     specialsEyebrow: "Promoções de serviço", specialsTitle: "Promoções da época", specialsIntro: "Mostre o cupão no telemóvel ou imprima-o e entregue-o ao seu consultor. É só isso.",
     viewCoupon: "Ver cupão", regularPrice: "Preço normal", validUntil: "Válido até {d}", noExpiry: "Sem data limite", limitedSpots: "Vagas limitadas",
-    badgeSale: "Em promoção", badgeSave15: "Poupe 15%", badgeNew: "Novo",
+    badgeSale: "Em promoção", badgeSave15: "Poupe 15%", badgeNew: "Novo", badgeFree: "Grátis",
     couponTitle: "Cupão de serviço", presentThis: "Apresente este cupão ao seu consultor de serviço na entrega do veículo.", couponCode: "Código do cupão",
     printCoupon: "Imprimir cupão", saveCoupon: "Guardar no telemóvel", saveHint: "No iPhone: toque em Partilhar e depois em Guardar em Ficheiros ou Adicionar a Fotos. No Android: Partilhar, depois Imprimir, depois Guardar como PDF.", backToHub: "Voltar ao portal",
     bookNow: "Marcar agora", oneCoupon: "Um cupão por visita. Não acumulável com outras ofertas. Impostos e taxas ambientais não incluídos.",
+    specialsService: "Serviço", specialsParts: "Peças e acessórios", presentThisParts: "Apresente este cupão no balcão de peças no momento da compra.", plusTax: "mais impostos", partsCoupon: "Cupão de peças", orderParts: "Encomendar online", askParts: "Pergunte à equipa de peças",
     reviewsEyebrow: "Diga-nos como correu"
   },
 
@@ -59,7 +60,14 @@ window.LANGS.pt = {
   specials: {
     oil:     ["Promoção de mudança de óleo", "Mudança de óleo sintético por $109.99 em vez de $139.99.", "A maioria das marcas e modelos. Até 5 L de óleo sintético, filtro incluído."],
     tires:   ["Troca de pneus Early Bird", "Troca, equilibragem das 4 rodas, alinhamento das 4 rodas e uma época de armazenamento de pneus, tudo por $385. Marque e conclua antes de 2 de outubro de 2026 e poupe 15%.", "O desconto de 15% aplica-se se o serviço for concluído até 2 de outubro de 2026. Armazenamento por uma época."],
-    storage: ["Novo: armazenamento de pneus", "$60 pela primeira época. Vagas limitadas, por ordem de chegada.", "Preço de lançamento para a primeira época. Depois aplica-se a tarifa normal."]
+    storage: ["Novo: armazenamento de pneus", "$60 pela primeira época. Vagas limitadas, por ordem de chegada.", "Preço de lançamento para a primeira época. Depois aplica-se a tarifa normal."],
+    wipers:   ["Escovas limpa-vidros + líquido", "Escovas dianteiras e um garrafão de líquido limpa-vidros por $64.99 mais impostos.", "A maioria das marcas e modelos. Apenas escovas em stock."],
+    acc:      ["10% de desconto em todos os acessórios", "Todos os acessórios do catálogo, tapetes e protetores incluídos.", "Exclui mão de obra de instalação. Acessórios em stock e por encomenda."],
+    battery:  ["$25 de desconto em baterias", "$25 de desconto em qualquer bateria de carro ou carrinha, instalação na hora.", "Uma bateria por cupão. Mão de obra de instalação à parte."],
+    tpms:     ["10% de desconto em sensores de pressão", "Dez por cento de desconto em sensores TPMS, mesmo a tempo dos pneus de inverno.", "Apenas peças. Instalação e programação à parte."],
+    fob:      ["Pilhas do comando: a 2.ª a metade do preço", "Compre uma pilha para o comando e leve a segunda a 50%.", "A segunda pilha deve ser de valor igual ou inferior."],
+    frames:   ["Molduras de matrícula Barrie Nissan grátis", "Molduras de matrícula dianteira e traseira Barrie Nissan, sem custo.", "Um conjunto por cliente, até esgotar o stock."],
+    delivery: ["Novo: entrega ao domicílio local", "Encomende as suas peças e acessórios online ou por telefone e entregamos à sua porta na zona de Barrie.", "Pergunte à equipa de peças sobre zonas e prazos de entrega."]
   },
 
   linkGroups: { shop: "Comprar", finance: "Financiamento", service: "Serviço e peças", owner: "Recursos para proprietários Nissan" },

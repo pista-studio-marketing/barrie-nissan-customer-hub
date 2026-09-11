@@ -40,10 +40,11 @@ window.LANGS.tl = {
     stickyBook: "Mag-book ng service", stickyCall: "Tumawag",
     specialsEyebrow: "Service specials", specialsTitle: "Mga special ngayong season", specialsIntro: "Ipakita ang coupon sa inyong phone o i-print at ibigay sa inyong advisor. Iyon lang.",
     viewCoupon: "Tingnan ang coupon", regularPrice: "Regular na presyo", validUntil: "Valid hanggang {d}", noExpiry: "Walang expiry", limitedSpots: "Limitado ang slots",
-    badgeSale: "Sale", badgeSave15: "Makatipid ng 15%", badgeNew: "Bago",
+    badgeSale: "Sale", badgeSave15: "Makatipid ng 15%", badgeNew: "Bago", badgeFree: "Libre",
     couponTitle: "Service coupon", presentThis: "Ipakita ang coupon na ito sa inyong service advisor sa pag-drop off.", couponCode: "Coupon code",
     printCoupon: "I-print ang coupon", saveCoupon: "I-save sa phone", saveHint: "Sa iPhone: i-tap ang Share, pagkatapos Save to Files o Add to Photos. Sa Android: Share, pagkatapos Print, pagkatapos Save as PDF.", backToHub: "Bumalik sa hub",
     bookNow: "Mag-book na", oneCoupon: "Isang coupon bawat pagbisita. Hindi maaaring pagsamahin sa ibang alok. Hindi kasama ang buwis at environmental fees.",
+    specialsService: "Service", specialsParts: "Parts at accessories", presentThisParts: "Ipakita ang coupon na ito sa parts counter sa oras ng pagbili.", plusTax: "plus tax", partsCoupon: "Parts coupon", orderParts: "Mag-order online", askParts: "Magtanong sa parts team",
     reviewsEyebrow: "Sabihin sa amin kung kumusta kami"
   },
 
@@ -59,7 +60,14 @@ window.LANGS.tl = {
   specials: {
     oil:     ["Oil change special", "Full synthetic oil change, sale sa $109.99 sa halip na $139.99.", "Karamihan ng brand at model. Hanggang 5 L na synthetic oil, kasama ang filter."],
     tires:   ["Early Bird tire changeover", "Changeover, 4-wheel balance, 4-wheel alignment at isang season ng tire storage, lahat sa $385. Mag-book at tapusin bago ang Oktubre 2, 2026 at makatipid ng 15%.", "Ang 15% off ay para sa serbisyong natapos bago o sa Oktubre 2, 2026. Isang season ang storage."],
-    storage: ["Bago: tire storage", "$60 para sa unang season. Limitado ang slots, first come, first served.", "Introductory na presyo para sa unang season. Standard na rate pagkatapos."]
+    storage: ["Bago: tire storage", "$60 para sa unang season. Limitado ang slots, first come, first served.", "Introductory na presyo para sa unang season. Standard na rate pagkatapos."],
+    wipers:   ["Wiper blades + washer fluid", "Front wiper blades at isang jug ng washer fluid sa $64.99 plus tax.", "Karamihan ng brand at model. In-stock na blades lang."],
+    acc:      ["10% off sa lahat ng accessories", "Lahat ng accessory sa catalogue, kasama ang floor mats at liners.", "Hindi kasama ang installation labour. In-stock at special-order na accessories."],
+    battery:  ["$25 off sa baterya ng car at truck", "$25 off sa anumang baterya ng car o truck, may installation on the spot.", "Isang baterya bawat coupon. Hiwalay ang installation labour."],
+    tpms:     ["10% off sa tire pressure sensors", "Sampung porsyento off sa TPMS sensors, tamang-tama para sa winter tires.", "Parts lang. Hiwalay ang installation at programming."],
+    fob:      ["Key fob batteries: buy one, get one 50% off", "Bumili ng isang key fob battery, 50% off ang pangalawa.", "Ang pangalawang baterya ay dapat pareho o mas mababa ang halaga."],
+    frames:   ["Libreng Barrie Nissan licence plate frames", "Front at rear Barrie Nissan licence plate frames, walang bayad.", "Isang set bawat customer, habang may stock."],
+    delivery: ["Bago: local home delivery", "Mag-order ng parts at accessories online o sa telepono at ihahatid namin sa inyong pinto sa Barrie area.", "Magtanong sa parts team tungkol sa delivery zones at oras."]
   },
 
   linkGroups: { shop: "Mamili", finance: "Financing", service: "Service at parts", owner: "Resources para sa may-ari ng Nissan" },

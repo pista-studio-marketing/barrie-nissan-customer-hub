@@ -19,7 +19,7 @@ assets/favicon.svg    tab icon
 
 ## Service specials & coupons
 
-Specials live in `dealer-config.js` (`specials`: id, price, regular price, `validUntil` ISO date or null, coupon code, badge) and their text in each `js/lang/*.js` (`specials[id]`: title, details, terms). An expired special disappears from the page automatically on the day after `validUntil`.
+Specials live in `dealer-config.js` (`specials`: id, `dept` service or parts, price, regular price, `validUntil` ISO date or null, coupon code, badge; `coupon: false` makes an announcement card without a coupon) and their text in each `js/lang/*.js` (`specials[id]`: title, details, terms). An expired special disappears from the page automatically on the day after `validUntil`.
 
 Each special has a "View coupon" button that opens `coupon.html?id=<id>&lang=<code>`: a printable ticket with the logo, price, terms, coupon code and "present this to your advisor". Print uses a clean print stylesheet; "Save to phone" opens the native share sheet on mobile (Save to Files / Photos) and falls back to the print dialog on desktop (Save as PDF). Advisors just need to read the code (e.g. `BN-EARLY-15`) off the screen or paper.
 

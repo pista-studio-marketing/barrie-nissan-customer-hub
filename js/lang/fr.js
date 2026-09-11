@@ -40,10 +40,11 @@ window.LANGS.fr = {
     stickyBook: "Rendez-vous service", stickyCall: "Appeler",
     specialsEyebrow: "Promotions service", specialsTitle: "Les promotions de la saison", specialsIntro: "Montrez le coupon sur votre téléphone ou imprimez-le et remettez-le à votre conseiller. C'est tout.",
     viewCoupon: "Voir le coupon", regularPrice: "Prix régulier", validUntil: "Valide jusqu'au {d}", noExpiry: "Sans date limite", limitedSpots: "Places limitées",
-    badgeSale: "En solde", badgeSave15: "Économisez 15 %", badgeNew: "Nouveau",
+    badgeSale: "En solde", badgeSave15: "Économisez 15 %", badgeNew: "Nouveau", badgeFree: "Gratuit",
     couponTitle: "Coupon service", presentThis: "Présentez ce coupon à votre conseiller au service lors du dépôt du véhicule.", couponCode: "Code du coupon",
     printCoupon: "Imprimer le coupon", saveCoupon: "Enregistrer sur le téléphone", saveHint: "Sur iPhone: touchez Partager, puis Enregistrer dans Fichiers ou Ajouter à Photos. Sur Android: Partager, puis Imprimer, puis Enregistrer en PDF.", backToHub: "Retour à l'espace client",
     bookNow: "Réserver", oneCoupon: "Un coupon par visite. Ne peut être combiné à d'autres offres. Taxes et frais environnementaux en sus.",
+    specialsService: "Service", specialsParts: "Pièces et accessoires", presentThisParts: "Présentez ce coupon au comptoir des pièces au moment de l'achat.", plusTax: "plus taxes", partsCoupon: "Coupon pièces", orderParts: "Commander en ligne", askParts: "Demander à l'équipe des pièces",
     reviewsEyebrow: "Dites-nous comment ça s'est passé"
   },
 
@@ -59,7 +60,14 @@ window.LANGS.fr = {
   specials: {
     oil:     ["Promo changement d'huile", "Changement d'huile synthétique à 109,99 $ au lieu de 139,99 $.", "La plupart des marques et modèles. Jusqu'à 5 L d'huile synthétique, filtre inclus."],
     tires:   ["Changement de pneus Early Bird", "Changement, équilibrage des 4 roues, alignement des 4 roues et une saison d'entreposage de pneus, le tout pour 385 $. Réservez et complétez avant le 2 octobre 2026 et économisez 15 %.", "Le rabais de 15 % s'applique si le service est complété au plus tard le 2 octobre 2026. Entreposage pour une saison."],
-    storage: ["Nouveau: entreposage de pneus", "60 $ pour la première saison. Places limitées, premier arrivé, premier servi.", "Prix de lancement pour la première saison. Tarif régulier par la suite."]
+    storage: ["Nouveau: entreposage de pneus", "60 $ pour la première saison. Places limitées, premier arrivé, premier servi.", "Prix de lancement pour la première saison. Tarif régulier par la suite."],
+    wipers:   ["Balais d'essuie-glace + lave-glace", "Balais d'essuie-glace avant et un bidon de lave-glace pour 64,99 $ plus taxes.", "La plupart des marques et modèles. Balais en stock seulement."],
+    acc:      ["10 % sur tous les accessoires", "Tous les accessoires du catalogue, tapis et protège-tapis inclus.", "Exclut la main-d'œuvre d'installation. Accessoires en stock et sur commande."],
+    battery:  ["25 $ de rabais sur les batteries", "25 $ de rabais sur toute batterie d'auto ou de camion, installation sur place.", "Une batterie par coupon. Main-d'œuvre d'installation en sus."],
+    tpms:     ["10 % sur les capteurs de pression des pneus", "Dix pour cent de rabais sur les capteurs TPMS, juste à temps pour les pneus d'hiver.", "Pièces seulement. Installation et programmation en sus."],
+    fob:      ["Piles de télécommande: la 2e à moitié prix", "Achetez une pile de télécommande, obtenez la deuxième à 50 %.", "La deuxième pile doit être de valeur égale ou moindre."],
+    frames:   ["Cadres de plaque Barrie Nissan gratuits", "Cadres de plaque d'immatriculation avant et arrière Barrie Nissan, sans frais.", "Un ensemble par client, jusqu'à épuisement des stocks."],
+    delivery: ["Nouveau: livraison à domicile locale", "Commandez vos pièces et accessoires en ligne ou par téléphone et on les livre à votre porte dans la région de Barrie.", "Informez-vous auprès de l'équipe des pièces pour les zones et les délais."]
   },
 
   linkGroups: { shop: "Magasiner", finance: "Financement", service: "Service et pièces", owner: "Ressources propriétaires Nissan" },

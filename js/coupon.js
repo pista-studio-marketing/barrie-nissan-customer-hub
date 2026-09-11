@@ -8,14 +8,14 @@
   let lang = q.get("lang");
   if (!LANGS[lang]) { try { lang = localStorage.getItem("hub-lang"); } catch (e) {} }
   if (!LANGS[lang]) lang = CODES[0];
-  const sp = D.specials.find((s) => s.id === q.get("id")) || D.specials[0];
+  const sp = D.specials.find((s) => s.id === q.get("id") && s.coupon !== false) || D.specials[0];
 
   function render() {
     const L = LANGS[lang], U = L.ui, t = L.specials[sp.id] || [sp.id, "", ""];
     document.documentElement.lang = lang;
     document.title = `${D.name} · ${U.couponTitle} · ${t[0]}`;
     const fmtDate = (iso) => new Date(iso + "T12:00:00").toLocaleDateString(lang === "uk" ? "uk-UA" : lang === "tl" ? "en-CA" : lang + "-CA", { year: "numeric", month: "long", day: "numeric" });
-    const badge = { sale: U.badgeSale, save15: U.badgeSave15, new: U.badgeNew }[sp.badge] || "";
+    const badge = { sale: U.badgeSale, save15: U.badgeSave15, new: U.badgeNew, free: U.badgeFree || U.badgeSale }[sp.badge] || "";
 
     // language switcher
     const ls = $("langs"); ls.innerHTML = "";
@@ -27,7 +27,8 @@
 
     $("back").textContent = "← " + U.backToHub; $("back").href = "index.html?lang=" + lang + "#specials";
     $("ticket").className = "ticket ticket--" + (sp.badge || "sale");
-    $("kind").innerHTML = `${U.couponTitle}<strong>${D.slogan || ""}</strong>`;
+    const isParts = (sp.dept || "service") === "parts";
+    $("kind").innerHTML = `${isParts ? (U.partsCoupon || U.couponTitle) : U.couponTitle}<strong>${D.slogan || ""}</strong>`;
     $("badge").textContent = badge;
     $("title").textContent = t[0];
     $("price").textContent = sp.price;
@@ -36,15 +37,16 @@
     $("terms").textContent = (t[2] ? t[2] + " " : "") + U.oneCoupon;
     $("dealer").textContent = D.name;
     $("address").textContent = `${D.address.line1}, ${D.address.city}, ${D.address.province} ${D.address.postal}`;
-    $("phone").textContent = D.phones.service || D.phones.main;
+    $("phone").textContent = isParts ? (D.phones.parts || D.phones.main) : (D.phones.service || D.phones.main);
     $("validity").textContent = sp.validUntil ? fill(U.validUntil, { d: fmtDate(sp.validUntil) }) : (sp.id === "storage" ? U.limitedSpots : U.noExpiry);
+    if (sp.price && /\$\d/.test(sp.price) && !sp.regular && isParts) $("price").textContent = sp.price + " " + (U.plusTax || "");
     $("codeLabel").textContent = U.couponCode; $("code").textContent = sp.code || "";
-    $("present").textContent = U.presentThis;
+    $("present").textContent = isParts ? (U.presentThisParts || U.presentThis) : U.presentThis;
 
     $("printBtn").textContent = U.printCoupon;
     $("shareBtn").textContent = U.saveCoupon;
-    $("bookBtn").textContent = U.bookNow;
-    const book = D.quickActions.find((a) => a.primary); $("bookBtn").href = book ? book.url : D.website;
+    $("bookBtn").textContent = isParts ? (U.orderParts || U.bookNow) : U.bookNow;
+    const book = D.quickActions.find((a) => (isParts ? a.key === "parts" : a.primary)); $("bookBtn").href = book ? book.url : D.website;
     $("hint").textContent = U.saveHint;
     $("foot").innerHTML = `${D.name} · <a href="index.html?lang=${lang}">${U.backToHub}</a>`;
   }
